@@ -1,0 +1,276 @@
+body{
+    background-color: black;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------------------------- Barra de Navegación ---------------------------------*/
+.logo{
+    padding-left: 5%;
+}
+
+.navbar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+}
+
+.navbar-nav, .form-control{
+    padding-left: 5%;
+}
+
+.form-control{
+    font-size: 1.1vw;
+    background: transparent;
+    border: none;
+}
+
+/*------------------------------------------- Portada -----------------------------------*/
+main{
+    background-image:url(https://66.media.tumblr.com/44f743744268f1c50ecb0ca6253824c3/tumblr_pul1bz9CKD1wviohto1_540.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.info{
+    /*background-color: chartreuse;*/
+    width: 45%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;
+}
+
+.dark{
+    /*background-color: violet;*/
+    height: 8vh;
+    padding-left: 10%;
+    margin-top: 30%;
+}
+
+h1{ 
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.info2{
+    /*background-color: darkblue;*/
+    color: white;
+    text-align: justify;
+    height: 35vh;
+    padding: 4%;
+    display:block;
+    justify-content: flex-end;
+    overflow: auto;
+    font-size: .8rem;
+}
+
+.boton{
+    /*background-color: fuchsia;*/
+    padding:5%;
+    margin-bottom: 8%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.boton input{
+    border: solid 1% black;
+    border-radius: 5px;
+    margin-left: 1%;    
+    padding:1% 2%;
+    font-size: .95rem;
+}
+
+.info span, p{
+    padding-left: 8%;
+}
+
+/*------------------------------------Grid---------------------------------------*/
+h2{
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.contenedor1, .contenedor2, .contenedor3{
+    /*background-color: blue;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:2%;
+    max-width: 100%;
+    height: 40vh;
+    margin-bottom: 7%;
+}
+
+.contenedor1 img:hover{
+    transform: scale(1.1);
+}
+
+.contenedor2 img:hover{
+    transform: scale(1.1);
+}
+
+.contenedor3 img:hover{
+    transform: scale(1.1);
+}
+
+.grid-item img{
+    width: 100%; /*Para que la imagen se acople a contenedor grid item*/
+}
+
+
+/*---------------------------------FOOTER---------------------------------------*/
+footer{
+    /*background-color: springgreen;*/
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie{
+    /*background-color: cornflowerblue;*/
+    width: 80%;
+    padding: 1% 14%;
+}
+
+.redes img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+footer section{
+    /*background-color: darkgreen;*/
+    width: 80%;
+    padding: .5% 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.piepag ul{
+    /*background-color: brown;*/
+    list-style: none;
+    width: 120%;
+    color: white;
+    text-decoration: underline;
+    font-size: small;
+    margin-bottom: 0;
+}
+
+footer input{
+    width: 25%;
+    font-size: small;
+    margin-left: 14%;
+    border: solid 2px gray;
+    background-color: black;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+
+/*---------------------------------- MEDIA QUERY --------------------------------------*/
+
+@media screen and (min-width: 593px){
+    h1{ 
+        font-size: 2.8rem;
+    }
+
+    .info2{
+        padding: 3%;
+        font-size: .9rem;
+        margin-top: 8%;
+    }
+
+    .boton input{
+        font-size: 1rem;
+        margin-left: 4%;
+    }
+
+    .contenedor1, .contenedor2, .contenedor3{
+        height: 40vh;
+        margin-bottom: 10%
+    }
+}
+
+@media screen and (min-width: 718px){
+    h1{ 
+        font-size: 3rem;
+    }
+
+    .info{
+        width: 40%;
+    }
+
+    .dark{
+        margin-top: 25%;
+    }
+    
+    .boton input{
+        font-size: 2.9vh;
+    }
+
+    .contenedor1, .contenedor2, .contenedor3{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 2%;
+    }
+    
+    .info2{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width: 802px){
+    .contenedor1, .contenedor2, .contenedor3{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 6%;
+    }
+}
+
+@media screen and (min-width: 956px){
+    .contenedor1, .contenedor2, .contenedor3{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 8%;
+    }
+}
+
+@media screen and (min-width: 1123px){
+    h1{ 
+        font-size: 4rem;
+    }
+
+    .info{
+        width: 35%;
+    }
+
+    .info2{
+        font-size: .9rem;
+    }
+
+    .contenedor1, .contenedor2, .contenedor3{
+        grid-template-columns: repeat(5, 1fr);
+        height: 25vh;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (min-width: 1360px){
+    .info{
+        width: 30%;
+    }
+
+    .info2{
+        font-size: 1rem;
+    }
+}
+
